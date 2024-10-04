@@ -12,4 +12,8 @@ export class UserService {
   postActivity(activityDto: any): Observable<any> {
     return this.hhtp.post(BASIC_URL + '/api/activity', activityDto);
   }
+
+  getActivities(): Observable<any> {
+    return this.hhtp.get(BASIC_URL + '/api/activities');
+  }
 }
