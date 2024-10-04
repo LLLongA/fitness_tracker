@@ -1,0 +1,40 @@
+<nz-layout class="layout">
+  <nz-sider>
+    <div class="logo">
+      <div class="user-info">
+        <strong>john</strong>
+      </div>
+    </div>
+
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item routerLink="/dashboard">
+        <span nz-icon nzType="dashboard"></span>
+        <span>Dashboard</span>
+      </li>
+
+      <li nz-menu-item routerLink="/workout">
+        <!-- Replace 'split-cells' with a valid icon, e.g., 'appstore' -->
+        <span nz-icon nzType="appstore"></span>
+        <span>Workout</span>
+      </li>
+
+      <li nz-menu-item routerLink="/activity">
+        <span nz-icon nzType="control"></span>
+        <span>Activity</span>
+      </li>
+
+      <li nz-menu-item routerLink="/goal">
+        <span nz-icon nzType="fund"></span>
+        <span>Goal</span>
+      </li>
+    </ul>
+
+  </nz-sider>
+  <nz-layout class="right-layout">
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
