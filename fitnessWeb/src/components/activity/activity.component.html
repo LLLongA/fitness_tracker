@@ -1,0 +1,49 @@
+<div>
+  <div nz-row>
+    <h1 nz-card-grid [ngStyle]="gridstyle">Activity</h1>
+  </div>
+  <div nz-row>
+    <div nz-col nzFlex="2">
+      <nz-card nzType="inner" style="margin-top:16px;" nzTitle="Post New Activity">
+        <form nz-form [formGroup]="activityForm" class="custom-form" (ngSubmit)="submitForm()">
+
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input the calories">
+              <input type="text" nz-input formControlName="caloriesBurned"
+                placeholder="Enter the calories you burned" />
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input the distance">
+              <input type="number" nz-input formControlName="distance" placeholder="Enter Distance" />
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input the steps">
+              <input type="number" nz-input formControlName="steps" placeholder="Enter steps" />
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input the calories">
+              <nz-date-picker style="width: 100%;" formControlName="date"></nz-date-picker>
+            </nz-form-control>
+          </nz-form-item>
+
+          <button nz-button nzType="primary" nzBlock class="w-100" [disabled]="activityForm.invalid">
+            Post Activity
+          </button>
+
+
+        </form>
+
+
+      </nz-card>
+    </div>
+    <div nz-col nzFlex="3" style="margin-left: 20px;">
+
+    </div>
+  </div>
+</div>
