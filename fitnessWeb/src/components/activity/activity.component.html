@@ -43,6 +43,20 @@
       </nz-card>
     </div>
     <div nz-col nzFlex="3" style="margin-left: 20px;">
+      <nz-card nz-Type="inner" style="margin-top: 16px;" nzTitle="Past activities">
+        <div nz-card-grid style="width: 100%;" *ngFor="let activity of activities">
+          <div nz-col nzSpan="30">
+            Calories burned: <strong>{{activity.caloriesBurned}}</strong>
+            -
+            Distance: <strong>{{activity.distance}}</strong>
+            -
+            Steps: <strong>{{activity.steps}}</strong>
+            -
+            Date: <strong>{{activity.date | date}}</strong>
+          </div>
+
+        </div>
+      </nz-card>
 
     </div>
   </div>
