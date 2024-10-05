@@ -8,32 +8,36 @@ const BASIC_URL = 'http://localhost:8080';
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private hhtp: HttpClient) {}
+  constructor(private http: HttpClient) {}
   postActivity(activityDto: any): Observable<any> {
-    return this.hhtp.post(BASIC_URL + '/api/activity', activityDto);
+    return this.http.post(BASIC_URL + '/api/activity', activityDto);
   }
 
   getActivities(): Observable<any> {
-    return this.hhtp.get(BASIC_URL + '/api/activities');
+    return this.http.get(BASIC_URL + '/api/activities');
   }
 
   postWorkout(workoutDto: any): Observable<any> {
-    return this.hhtp.post(BASIC_URL + '/api/workout', workoutDto);
+    return this.http.post(BASIC_URL + '/api/workout', workoutDto);
   }
 
   getWorkouts(): Observable<any> {
-    return this.hhtp.get(BASIC_URL + '/api/workouts');
+    return this.http.get(BASIC_URL + '/api/workouts');
   }
 
   postGoal(goalDto: any): Observable<any> {
-    return this.hhtp.post(BASIC_URL + '/api/goal', goalDto);
+    return this.http.post(BASIC_URL + '/api/goal', goalDto);
   }
 
   getGoals(): Observable<any> {
-    return this.hhtp.get(BASIC_URL + '/api/goals');
+    return this.http.get(BASIC_URL + '/api/goals');
   }
 
   updateGoalsStatus(id: number): Observable<any> {
-    return this.hhtp.get(BASIC_URL + '/api/goals/status/' + id);
+    return this.http.get(BASIC_URL + '/api/goals/status/' + id);
+  }
+
+  getStats(): Observable<any> {
+    return this.http.get(BASIC_URL + '/api/stats');
   }
 }

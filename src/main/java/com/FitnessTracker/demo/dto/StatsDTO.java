@@ -13,5 +13,8 @@ public class StatsDTO {
 
     private int totalCaloriesBurned;
 
+    private int duration;
+
+
 
 }
