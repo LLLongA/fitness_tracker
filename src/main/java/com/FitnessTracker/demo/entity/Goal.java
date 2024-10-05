@@ -18,7 +18,7 @@ public class Goal {
 
     private String description;
 
-    private Date stratDate;
+    private Date startDate;
 
     private Date endDate;
 
@@ -29,7 +29,7 @@ public class Goal {
 
         goalDto.setId(id);
         goalDto.setDescription(description);
-        goalDto.setStratDate(stratDate);
+        goalDto.setStartDate(startDate);
         goalDto.setEndDate(endDate);
         goalDto.setAchieved(achieved);
 

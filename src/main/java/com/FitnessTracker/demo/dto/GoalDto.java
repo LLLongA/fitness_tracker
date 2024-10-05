@@ -10,7 +10,7 @@ public class GoalDto {
 
     private String description;
 
-    private Date stratDate;
+    private Date startDate;
 
     private Date endDate;
 
