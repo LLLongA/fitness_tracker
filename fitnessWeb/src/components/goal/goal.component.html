@@ -32,6 +32,24 @@
       </nz-card>
     </div>
     <div nz-col nzFlex="3" style="margin-left: 20px;">
+      <nz-card nzType="inner" style="margin-top: 16px;" nzTitle="Past Goals">
+        <div nz-card-grid style="width: 100%;" *ngFor="let goal of goals">
+          <div nz-col nzSpan="30">
+            Description: <strong>{{goal.description}}</strong>
+            -
+            StartDate: <strong>{{goal.startDate | date}}</strong>
+            -
+            EndDate: <strong>{{goal.endDate|date}}</strong>
+            -
+            Achieved: <strong>{{goal.achieved}}</strong>
+
+            <span *ngIf="!goal.achieved" nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'"
+              [nzTwotoneColor]="'#52c41a'" style="margin-left: 15px ;"></span>
+
+
+          </div>
+        </div>
+      </nz-card>
     </div>
   </div>
 </div>

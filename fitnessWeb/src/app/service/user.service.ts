@@ -28,4 +28,8 @@ export class UserService {
   postGoal(goalDto: any): Observable<any> {
     return this.hhtp.post(BASIC_URL + '/api/goal', goalDto);
   }
+
+  getGoals(): Observable<any> {
+    return this.hhtp.get(BASIC_URL + '/api/goals');
+  }
 }
