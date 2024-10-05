@@ -6,6 +6,7 @@
   <div nz-row>
     <div nz-col nzFlex="2">
       <nz-card nzType="inner" style="margin-top: 16px;" nzTitle="post new Workout">
+
         <form nz-form [formGroup]="workoutForm" (ngSubmit)="submitForm()" class="custom-form">
           <nz-form-item>
             <nz-form-control nzErrorTip="Please input the calories">
@@ -41,6 +42,24 @@
 
 
         </form>
+      </nz-card>
+    </div>
+    <div nz-col nzFlex="3" style="margin-left: 20px;">
+      <nz-card nz-Type="inner" style="margin-top: 16px;" nzTitle="Pass workouts">
+        <div nz-card-grid style="width: 100%;" *ngFor="let workout of workouts">
+          <div nz-col nzSpan="30">
+            Calories Burned: <strong>{{workout.caloriesBurned}}</strong>
+            -
+            Duration: <strong>{{workout.duration}}</strong>
+            -
+            Date: <strong>{{workout.date | date}}</strong>
+            -
+            Type: <strong>{{workout.type}}</strong>
+
+
+
+          </div>
+        </div>
       </nz-card>
     </div>
   </div>

@@ -40,6 +40,8 @@ export class WorkoutComponent {
     'Plymetrics',
   ];
 
+  workouts: any;
+
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
@@ -53,6 +55,13 @@ export class WorkoutComponent {
       date: [null, [Validators.required]],
       caloriesBurned: [null, [Validators.required]],
     });
+    this.getWorkouts();
+  }
+
+  getWorkouts() {
+    this.userService.getWorkouts().subscribe((res) => {
+      this.workouts = res;
+    });
   }
 
   submitForm() {
@@ -61,9 +70,9 @@ export class WorkoutComponent {
         this.message.success('[post successfully]', {
           nzDuration: 5000,
         });
-        console.log(this.workoutForm.value);
 
         this.workoutForm.reset();
+        this.getWorkouts();
       },
       (error) => {
         this.message.error('Error while posting workout', { nzDuration: 5000 });
