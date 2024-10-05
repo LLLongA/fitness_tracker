@@ -6,7 +6,7 @@
   <div nz-row>
     <div nz-col nzFlex="2">
       <nz-card nzType="inner" style="margin-top: 16px;" nzTitle="post new Workout">
-        <form nz-form [formGroup]="workoutForm" class="custom-form">
+        <form nz-form [formGroup]="workoutForm" (ngSubmit)="submitForm()" class="custom-form">
           <nz-form-item>
             <nz-form-control nzErrorTip="Please input the calories">
               <input type="text" nz-input formControlName="caloriesBurned"
@@ -29,7 +29,7 @@
           <nz-form-item>
             <nz-form-control nzErrorTip="Please input the type">
               <nz-select nzAllowClear nzPlaceHolder="Select the type" formControlName="type">
-                <nz-option *ngFor="let type of listOfType" [nzLabel]="type" nzValue="type"></nz-option>
+                <nz-option *ngFor="let type of listOfType" [nzLabel]="type" [nzValue]="type"></nz-option>
 
               </nz-select>
             </nz-form-control>
