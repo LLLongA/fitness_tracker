@@ -32,4 +32,8 @@ export class UserService {
   getGoals(): Observable<any> {
     return this.hhtp.get(BASIC_URL + '/api/goals');
   }
+
+  updateGoalsStatus(id: number): Observable<any> {
+    return this.hhtp.get(BASIC_URL + '/api/goals/status/' + id);
+  }
 }

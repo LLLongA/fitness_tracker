@@ -8,4 +8,6 @@ public interface GoalService {
 
     GoalDto postGoal(GoalDto dto);
     List<GoalDto> getGoals();
+
+    GoalDto updateStatus(Long id);
 }

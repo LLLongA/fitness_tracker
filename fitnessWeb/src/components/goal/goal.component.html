@@ -43,8 +43,8 @@
             -
             Achieved: <strong>{{goal.achieved}}</strong>
 
-            <span *ngIf="!goal.achieved" nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'"
-              [nzTwotoneColor]="'#52c41a'" style="margin-left: 15px ;"></span>
+            <span *ngIf="!goal.achieved" (click)="updateStatus(goal.id)" nz-icon [nzType]="'check-circle'"
+              [nzTheme]="'twotone'" [nzTwotoneColor]="'#52c41a'" style="margin-left: 15px ;"></span>
 
 
           </div>
