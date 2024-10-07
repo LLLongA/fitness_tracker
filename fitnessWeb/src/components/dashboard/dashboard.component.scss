@@ -1,0 +1,24 @@
+.stats-container {
+  padding: 20px;
+  background-color: #f9f9f9;  // 设置容器的背景颜色
+}
+
+.stat-card {
+  background-color: #f0f8ff;  // 卡片背景颜色
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  // 添加阴影
+  text-align: center;  // 文本居中
+}
+
+.stat-card p {
+  font-size: 1.2em;
+  color: #333;  // 设置字体颜色
+}
+
+nz-row {
+  margin-bottom: 16px;  // 设置行与行之间的间距
+}
+
+nz-col {
+  margin-bottom: 16px;  // 设置列与列之间的间距
+}
