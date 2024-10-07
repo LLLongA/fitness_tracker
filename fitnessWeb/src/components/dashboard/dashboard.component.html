@@ -1,37 +1,39 @@
-<div nz-row>
-  <div nz-col [nzXs]="{span:5,offset:1}" [nzLg]="{span:6,offset:2}">
-    <nz-card nz-Title="Total Calories Burned" style="background-color: aliceblue;">
-      <p>{{statsData.totalCaloriesBurned}} cal</p>
-    </nz-card>
-  </div>
-  <div nz-col [nzXs]="{span:5,offset:1} " [nzLg]="{span:6,offset:2}">
-    <nz-card nzTitle="Total Steps Taken" style="background-color: aliceblue;">
-      <p>{{statsData.steps}}</p>
+<div *ngIf="statsData">
+  <div nz-row>
+    <div nz-col [nzXs]="{span:5,offset:1}" [nzLg]="{span:6,offset:2}">
+      <nz-card nz-Title="Total Calories Burned" style="background-color: aliceblue;">
+        <p>{{statsData.totalCaloriesBurned}} cal</p>
+      </nz-card>
+    </div>
+    <div nz-col [nzXs]="{span:5,offset:1} " [nzLg]="{span:6,offset:2}">
+      <nz-card nzTitle="Total Steps Taken" style="background-color: aliceblue;">
+        <p>{{statsData.steps}}</p>
 
-    </nz-card>
-  </div>
-</div>
-
-<div nz-row style="margin-top:20px;">
-  <div nz-col [nzXs]="{span:5,offset:1} " [nzLg]="{span:6,offset:2}">
-    <nz-card nzTitle="Total Time Spent" style="background-color: aliceblue;">
-      <p>{{statsData.duration}}min</p>
-
-    </nz-card>
+      </nz-card>
+    </div>
   </div>
 
-  <div nz-col [nzXs]="{span:5,offset:1} " [nzLg]="{span:6,offset:2}">
-    <nz-card nzTitle="Achieved Goals" style="background-color: aliceblue;">
-      <p>{{statsData.achievedGoals}}</p>
+  <div nz-row style="margin-top:20px;">
+    <div nz-col [nzXs]="{span:5,offset:1} " [nzLg]="{span:6,offset:2}">
+      <nz-card nzTitle="Total Time Spent" style="background-color: aliceblue;">
+        <p>{{statsData.duration}}min</p>
 
-    </nz-card>
+      </nz-card>
+    </div>
+
+    <div nz-col [nzXs]="{span:5,offset:1} " [nzLg]="{span:6,offset:2}">
+      <nz-card nzTitle="Achieved Goals" style="background-color: aliceblue;">
+        <p>{{statsData.achievedGoals}}</p>
+
+      </nz-card>
+    </div>
+
+    <div nz-col [nzXs]="{span:11,offset:1} " [nzLg]="{span:6,offset:2}">
+      <nz-card nzTitle="Not Achieved Goals" style="background-color: aliceblue;">
+        <p>{{statsData.notAchievedGoals}}</p>
+
+      </nz-card>
+    </div>
+
   </div>
-
-  <div nz-col [nzXs]="{span:11,offset:1} " [nzLg]="{span:6,offset:2}">
-    <nz-card nzTitle="Not Achieved Goals" style="background-color: aliceblue;">
-      <p>{{statsData.notAchievedGoals}}</p>
-
-    </nz-card>
-  </div>
-
 </div>
